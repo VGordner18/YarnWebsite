@@ -10,6 +10,36 @@ last update: 11/6
     font-family: Arial, Helvetica, sans-serif;
 }
 
+nav a{
+    color: #000;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.nav-logo img {
+    width: 175px;
+    height: auto;
+}
+
+hr {
+    height: 4px;
+    margin: 20px 0; 
+    color:#000; 
+    border-bottom: none;
+}
+
 footer {
     font-size: 0.75em;
+    color: #fff;
+    background-color: #000;
+
 }
