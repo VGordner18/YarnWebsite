@@ -1,40 +1,121 @@
 /* 
 V Gordner
-last update: 11/6
+last update: 11/13
 */
 
 /* reset */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav a{
-    color: #000;
-    font-size: 1.25em;
-    text-decoration: none;
+.navbar {
+    width: 100%;
 }
 
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin-right: 60px;
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
 }
 
 .nav-logo img {
     width: 175px;
     height: auto;
+    display: block;
 }
 
-hr {
-    height: 4px;
-    margin: 20px 0; 
-    color:#000; 
-    border-bottom: none;
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-links a{
+    color: #000;
+    font-size: 1.25em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.nav-links a img {
+    width: 24px;
+    height: auto;
+} 
+
+.hamburger {
+display: none;
+}
+
+.navbar hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+body {
+    background-color: #fdf6ee;
+}
+
+/* Home page */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-1 {
+    /* font */
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+
+}
+
+.hero-2, .hero-3 { 
+    /* font */
+    font-size: 1.25rem;
+    font-weight: normal;
+    color:#e85d75;
+}
+
+.learn-more {
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 3px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 24px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.learn-more:hover {
+    background-color: #e85d75;
+    color: #fff;
+}
+
+.hero-banner {
+    display: flex;
+    width: 375px;
+    height: auto;
+    align-items: right;
 }
 
 /* log in page */
@@ -66,5 +147,89 @@ footer {
     font-size: 0.75em;
     color: #fff;
     background-color: #000;
-
 }
+
+/* phone viewport */
+@media (max-width: 767px) {
+    .navbar {
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .nav-logo img {
+        height: 50px;
+        width: auto;
+        display: block;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        transition: 0.3s;
+        background-color: #000;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        z-index: 1000;
+        background-color: #fff;
+        gap: 0;
+    }
+
+    .nav-links.active {
+    display: flex;
+    }
+
+    .nav-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333333; /* Change link text color if needed */
+    }
+
+    .nav-links li a:hover {
+    background-color: #f4f4f4;
+    }
+
+    .nav-links li a img {
+    width: 20px;
+    height: 20px;
+    }
+
+    .navbar hr {
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    }
+}
+
+/* tablet viewport */
+@media (min-width: 768px) and (max-width: 1024px) {}

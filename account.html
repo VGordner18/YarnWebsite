@@ -1,6 +1,6 @@
 <!--
 V Gordner
-Last update: 11/6
+Last update: 11/13
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +14,25 @@ Last update: 11/6
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
-            <div class="nav-links">
-                <li><a class="nav-logo" href="index.html"><img src="images/nav-logo.png" alt="logo"></a></li>
-                <li><a href="patterns.html">Patterns</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="stash.html">Stash</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="support.html">Support</a></li>
-                <li><a href="login.html">Sign In/Sign Up <img src="images/circle-user.png"></a></li>
+        <div class="nav-container">
+            <a class="nav-logo" href="index.html"><img src="images/nav-logo.png" alt="logo"></a>
+            
+                <button class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="stash.html">Stash</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="guides.html">Guides</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="login.html">Sign In/Sign Up <img src="images/circle-user.png"></a></li>
+                </ul>
             </div>
-        </ul>
         <hr>
     </nav>
 
