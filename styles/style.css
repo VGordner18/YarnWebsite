@@ -129,6 +129,20 @@ body {
     align-items: right;
 }
 
+.contact-header1, .contact-header2 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+}
+
+.contact-form {
+    display: flex;
+    flex: 1;
+    justify-content: center;    
+    align-items: center;
+}
+
 /* log in page */
 .page-background {
     flex: 1;
@@ -149,6 +163,17 @@ body {
     border-radius: 12px;
     width: 40%;
     height: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.signup-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 40%;
+    height: 470px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     text-align: center;
@@ -230,6 +255,11 @@ body {
     transform: scale(1.02);
 }
 
+.signup-link, .login-link {
+    margin-top: 10px;
+}
+
+/* footer */
 footer {
     font-size: 0.75em;
     color: #fff;
@@ -239,6 +269,7 @@ footer {
 
 /* phone viewport */
 @media (max-width: 767px) {
+    /* navbar phone */
     .navbar {
         width: 100%;
         position: relative;
@@ -285,7 +316,7 @@ footer {
         width: 100%;
         border-bottom: 1px solid #ccc;
         z-index: 1000;
-        background-color: #fff;
+        background-color: #fdf6ee;
         gap: 0;
     }
 
@@ -300,11 +331,11 @@ footer {
     gap: 8px;
     padding: 1rem;
     text-decoration: none;
-    color: #333333; /* Change link text color if needed */
+    color: #000; 
     }
 
     .nav-links li a:hover {
-    background-color: #f4f4f4;
+    background-color: #fdf6ee;
     }
 
     .nav-links li a img {
@@ -317,6 +348,25 @@ footer {
     border: 0;
     border-top: 1px solid #e0e0e0;
     }
+
+    /* Home Page Mobile */
+    .hero-section {
+        display: block;
+    }
+
+    .hero-banner {
+        display: none;
+    }
+
+    /* login mobile */
+    .login-container, .signup-container {
+        width: 100%;
+    }
+
+    .signup-link {
+        margin-top: 10px;
+    }
+
 }
 
 /* tablet viewport */
