@@ -1,6 +1,6 @@
 <!--
 V Gordner
-Last update: 11/13
+Last update: 11/18
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -37,11 +37,11 @@ Last update: 11/13
     </nav>
 
     <!-- Body -->
-     <!-- signup -->
+    <!-- signup -->
     <main class="page-background">
         <div class="signup-container">
             <h1>Sign Up</h1>
-            <form class="circle-form">
+            <form class="circle-form" id="signup-form">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required> <br>
 
@@ -51,7 +51,9 @@ Last update: 11/13
                 <label for="password2">Enter password again</label>
                 <input type="password" id="password2" name="password2" required> <br>
 
-                <button type="submit" class="submit-btn">Log In</button>
+                <p id="auth-message" class="auth-message"></p>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
             </form>
             <p class="login-link">Have an account? <a href="login.html">Log in</a> </p>
         </div>

@@ -1,6 +1,6 @@
 <!--
 V Gordner
-Last update: 11/13
+Last update: 11/18
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,45 @@ Last update: 11/13
     </nav>
 
     <!-- Body -->
-    
+    <main class="account-page">
+        <div class="account-card">
+            <div class="account-header">
+                <div class="avatar-upload-box">
+                    <img src="images/circle-user.png" alt="Profile icon" id="account-avatar-img" class="account-avatar">
+                    <label for="avatar-input" class="avatar-upload-btn">Change Photo</label>
+                    <input type="file" id="avatar-input" accept="image/*" hidden>
+                </div>
+                <div>
+                    <h1 id="account-greeting">My Account</h1>
+                    <p id="account-email-display" class="account-subtext"></p>
+                </div>
+            </div>
+
+
+            <!-- Quick Links to User Sections -->
+            <div class="account-shortcuts">
+                <a href="patterns.html" class="shortcut-pill">My Patterns</a>
+                <a href="projects.html" class="shortcut-pill">My WIPs</a>
+                <a href="stash.html" class="shortcut-pill">My Stash</a>
+            </div>
+
+            <!-- Edit Profile Form -->
+            <form class="account-form" id="account-form">
+                <label for="account-name">Display Name</label>
+                <input type="text" id="account-name" name="name" required>
+
+                <label for="account-new-password">New Password (leave blank to keep current)</label>
+                <input type="password" id="account-new-password" name="newPassword" minlength="6" placeholder="••••••••">
+
+                <p id="auth-message" class="auth-message"></p>
+
+                <div class="account-actions">
+                    <button type="submit" class="submit-button">Save Changes</button>
+                    <button type="button" id="logout-btn" class="logout-button">Log Out</button>
+                </div>
+            </form>
+        </div>
+    </main>
 <footer>
     <p>&copy; 2026 V Gordner</p>
 </footer>

@@ -1,6 +1,6 @@
 /* 
 V Gordner
-last update: 11/13
+last update: 11/18
 */
 
 /* reset */
@@ -16,7 +16,17 @@ last update: 11/13
 }
 
 body {
+    min-height: 100dvh;
     background-color: #fdf6ee;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
 
 /* nav bar */
@@ -32,6 +42,9 @@ nav a{
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+}
+.nav-container li:hover {
+    font-weight: bold;
 }
 
 .nav-logo img {
@@ -72,76 +85,127 @@ display: none;
     border-top: 1px solid #000;
 }
 
-body {
-    background-color: #fdf6ee;
-}
-
 /* Home page */
 .hero-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    max-width: 100%;
+    gap: 48px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 60px 20px
+    padding: 16px 60px;
 }
 
 .hero-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-1 {
-    /* font */
-    font-size: 2.5rem;
-    margin-bottom: 16px;
-
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3.1rem;
+    font-weight: normal;
+    line-height: 1.08;
+    color: #2c2420;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
-.hero-2, .hero-3 { 
-    /* font */
-    font-size: 1.25rem;
+.hero-2, .hero-3 {
+    font-size: 1.15rem;
     font-weight: normal;
-    color:#e85d75;
+    line-height: 1.35;
+    color: #e85d75;
+    text-align: left;
+    padding: 0;
 }
 
 .learn-more {
     text-decoration: none;
     display: inline-block;
-    border: 2px solid #000;
-    border-radius: 3px;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 24px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #2c2420;
+    font-size: 0.95rem;
+    padding: 10px 36px;
     cursor: pointer;
-    margin-top: 16px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
 }
 
 .learn-more:hover {
     background-color: #e85d75;
+    border-color: #e85d75;
     color: #fff;
 }
 
 .hero-banner {
-    display: flex;
-    width: 375px;
+    width: 320px;
+    max-height: 290px;
     height: auto;
-    align-items: right;
+    border-radius: 18px;
+    object-fit: cover;
+    box-shadow: 0 10px 26px rgba(92, 64, 51, 0.1);
 }
 
-.contact-header1, .contact-header2 {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-
+/* Home page feature cards */
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 60px 20px;
 }
 
-.contact-form {
-    display: flex;
-    flex: 1;
-    justify-content: center;    
-    align-items: center;
+.feature-card {
+    background-color: #fffcf8;
+    border: 1px solid #eadcd0;
+    border-radius: 14px;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #2c2420;
+    box-shadow: 0 4px 14px rgba(92, 64, 51, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    border-color: #e85d75;
+    box-shadow: 0 8px 20px rgba(232, 93, 117, 0.12);
+}
+
+.feature-tag {
+    display: inline-block;
+    background-color: #fbe4e8;
+    color: #e85d75;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.feature-card h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.15rem;
+    font-weight: normal;
+    margin-bottom: 6px;
+    color: #2c2420;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #5c504a;
+}
+
 
 /* log in page */
 .page-background {
@@ -162,7 +226,6 @@ body {
     padding: 40px;
     border-radius: 12px;
     width: 40%;
-    height: 400px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     text-align: center;
@@ -173,7 +236,6 @@ body {
     padding: 40px;
     border-radius: 12px;
     width: 40%;
-    height: 470px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     text-align: center;
@@ -214,7 +276,7 @@ body {
 
 .circle-form form {
     background: white;
-    padding: 3 rem;
+    padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
@@ -259,12 +321,225 @@ body {
     margin-top: 10px;
 }
 
+.auth-message {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-top: 8px;
+    min-height: 20px;
+}
+
+/* Support page */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h1, h2{
+    padding: 0.75rem;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.submit-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #e85d75;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Account Page */
+.account-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 20px;
+}
+
+.account-card {
+    background-color: #fffcf8;
+    border: 1px solid #eadcd0;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(92, 64, 51, 0.08);
+    max-width: 540px;
+    width: 100%;
+    padding: 32px;
+}
+
+.account-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eadcd0;
+}
+
+.account-avatar {
+    width: 56px;
+    height: 56px;
+}
+
+.account-header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #2c2420;
+    text-align: left;
+    padding: 0;
+}
+
+.account-subtext {
+    color: #5c504a;
+    font-size: 0.95rem;
+    margin-top: 4px;
+}
+
+.account-shortcuts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.shortcut-pill {
+    text-decoration: none;
+    background-color: #fbe4e8;
+    color: #e85d75;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.shortcut-pill:hover {
+    background-color: #e85d75;
+    color: #fff;
+}
+
+.account-form label {
+    text-align: left;
+    color: #2c2420;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.account-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.account-actions .submit-button {
+    margin-top: 0;
+    flex: 2;
+}
+
+.logout-button {
+    flex: 1;
+    background-color: transparent;
+    color: #2c2420;
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.logout-button:hover {
+    background-color: #fbe4e8;
+    border-color: #e85d75;
+    color: #e85d75;
+}
+
+/* Profile Photo Upload */
+.avatar-upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.account-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e85d75;
+    background-color: #fdf6ee;
+}
+
+.avatar-upload-btn {
+    font-size: 0.78rem;
+    font-weight: bold;
+    color: #e85d75;
+    background-color: #fbe4e8;
+    padding: 4px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.avatar-upload-btn:hover {
+    background-color: #e85d75;
+    color: #fff;
+}
+
+/* Make navbar user icon circular when custom photo is used */
+.nav-links a img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
 /* footer */
 footer {
     font-size: 0.75em;
     color: #fff;
     background-color: #000;
-    align-content: bottom;
 }
 
 /* phone viewport */
@@ -356,6 +631,16 @@ footer {
 
     .hero-banner {
         display: none;
+    }
+
+    .features-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    /* Support mobile */
+    .headers {
+        margin: 0;
     }
 
     /* login mobile */
